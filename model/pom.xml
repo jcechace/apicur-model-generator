@@ -87,7 +87,7 @@
                 <configuration>
                     <customAnnotator>io.fabric8.kubernetes.ModelAnnotator</customAnnotator>
                     <sourcePaths>
-                        <sourcePath>${project.basedir}/src/main/resources/schema/kube-schema.json</sourcePath>
+                        <sourcePath>${project.basedir}/src/main/resources/schema/model-schema.json</sourcePath>
                     </sourcePaths>
                     <targetPackage>io.fabric8.kubernetes.api.model</targetPackage>
                     <includeConstructors>true</includeConstructors>
@@ -121,13 +121,6 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.groupId}.${project.artifactId}</Bundle-SymbolicName>
                         <Import-Package>*</Import-Package>
-                        <Export-Package>
-                            io.fabric8.kubernetes.api.model.storage**
-                        </Export-Package>
-                        <Include-Resource>
-                            {maven-resources},
-                            /storage.properties=target/classes/model.properties,
-                        </Include-Resource>
                     </instructions>
                 </configuration>
             </plugin>
@@ -145,7 +138,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>${project.build.outputDirectory}/schema/kube-schema.json</file>
+                                    <file>${project.build.outputDirectory}/schema/meta-schema.json</file>
                                     <type>json</type>
                                     <classifier>schema</classifier>
                                 </artifact>
