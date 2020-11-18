@@ -138,7 +138,7 @@
                         <configuration>
                             <artifacts>
                                 <artifact>
-                                    <file>${project.build.outputDirectory}/schema/meta-schema.json</file>
+                                    <file>${project.build.outputDirectory}/schema/model-schema.json</file>
                                     <type>json</type>
                                     <classifier>schema</classifier>
                                 </artifact>
