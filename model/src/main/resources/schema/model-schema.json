@@ -1,0 +1,427 @@
+{
+  "id": "http://fabric8.io/code-generator/Schema#",
+  "$schema": "http://json-schema.org/schema#",
+  "definitions": {
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistry": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "description": "",
+          "default": " apicur.io/v1alpha1",
+          "required": true
+        },
+        "kind": {
+          "type": "string",
+          "description": "",
+          "default": "ApicurioRegistry",
+          "required": true
+        },
+        "metadata": {
+          "javaType": "io.fabric8.kubernetes.api.model.ObjectMeta"
+        },
+        "spec": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpec",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpec"
+        },
+        "status": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryStatus",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistryStatus"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistry",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.HasMetadata",
+        "io.fabric8.kubernetes.api.model.Namespaced"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryList": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "apiVersion": {
+          "type": "string",
+          "description": "",
+          "default": " apicur.io/v1alpha1",
+          "required": true
+        },
+        "items": {
+          "type": "array",
+          "description": "",
+          "items": {
+            "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistry",
+            "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistry"
+          }
+        },
+        "kind": {
+          "type": "string",
+          "description": "",
+          "default": "ApicurioRegistryList",
+          "required": true
+        },
+        "metadata": {
+          "javaType": "io.fabric8.kubernetes.api.model.ListMeta"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistryList",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource",
+        "io.fabric8.kubernetes.api.model.KubernetesResourceList\u003cio.apicur.registry.operator.api.model.ApicurioRegistry\u003e"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpec": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "configuration": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfiguration",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
+        },
+        "deployment": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecDeployment",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecDeployment"
+        },
+        "image": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecImage",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecImage"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpec",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfiguration": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "dataSource": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationDataSource",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
+        },
+        "infinispan": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationInfinispan",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationInfinispan"
+        },
+        "kafka": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationKafka",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafka"
+        },
+        "logLevel": {
+          "type": "string",
+          "description": ""
+        },
+        "persistence": {
+          "type": "string",
+          "description": ""
+        },
+        "streams": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreams",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreams"
+        },
+        "ui": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationUI",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfiguration",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationDataSource": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "password": {
+          "type": "string",
+          "description": ""
+        },
+        "url": {
+          "type": "string",
+          "description": ""
+        },
+        "userName": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationInfinispan": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "clusterName": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationInfinispan",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationKafka": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "bootstrapServers": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafka",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreams": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "applicationId": {
+          "type": "string",
+          "description": ""
+        },
+        "applicationServerPort": {
+          "type": "string",
+          "description": ""
+        },
+        "bootstrapServers": {
+          "type": "string",
+          "description": ""
+        },
+        "security": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurity",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurity"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreams",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurity": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "scram": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityScram",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityScram"
+        },
+        "tls": {
+          "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityTls",
+          "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityTls"
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurity",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityScram": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "mechanism": {
+          "type": "string",
+          "description": ""
+        },
+        "passwordSecretName": {
+          "type": "string",
+          "description": ""
+        },
+        "truststoreSecretName": {
+          "type": "string",
+          "description": ""
+        },
+        "user": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityScram",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityTls": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "keystoreSecretName": {
+          "type": "string",
+          "description": ""
+        },
+        "truststoreSecretName": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityTls",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationUI": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "readOnly": {
+          "type": "boolean",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecDeployment": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "affinity": {
+          "javaType": "io.fabric8.kubernetes.api.model.Affinity"
+        },
+        "host": {
+          "type": "string",
+          "description": ""
+        },
+        "replicas": {
+          "type": "integer",
+          "description": ""
+        },
+        "tolerations": {
+          "type": "array",
+          "description": "",
+          "javaOmitEmpty": true,
+          "items": {
+            "javaType": "io.fabric8.kubernetes.api.model.Toleration"
+          }
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecDeployment",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecImage": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecImage",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryStatus": {
+      "type": "object",
+      "description": "",
+      "properties": {
+        "deploymentName": {
+          "type": "string",
+          "description": ""
+        },
+        "host": {
+          "type": "string",
+          "description": ""
+        },
+        "image": {
+          "type": "string",
+          "description": ""
+        },
+        "ingressName": {
+          "type": "string",
+          "description": ""
+        },
+        "replicaCount": {
+          "type": "integer",
+          "description": ""
+        },
+        "serviceName": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistryStatus",
+      "javaInterfaces": [
+        "io.fabric8.kubernetes.api.model.KubernetesResource"
+      ]
+    }
+  },
+  "type": "object",
+  "properties": {
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistry": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistry",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistry"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryList": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryList",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistryList"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpec": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpec",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpec"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfiguration": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfiguration",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationDataSource": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationDataSource",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationInfinispan": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationInfinispan",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationInfinispan"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationKafka": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationKafka",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafka"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreams": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreams",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreams"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurity": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurity",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurity"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityScram": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityScram",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityScram"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityTls": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationStreamsSecurityTls",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationStreamsSecurityTls"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationUI": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecConfigurationUI",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecDeployment": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecDeployment",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecDeployment"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecImage": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpecImage",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistrySpecImage"
+    },
+    "github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryStatus": {
+      "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistryStatus",
+      "javaType": "io.apicur.registry.operator.api.model.ApicurioRegistryStatus"
+    }
+  },
+  "additionalProperties": false
+}
