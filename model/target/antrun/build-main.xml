@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <echo>removing the duplicate generated class</echo>
+    <delete verbose="true">
+      <fileset dir="/home/rohaan/work/repos/fabric8-extension-model-generator-template/model/target/generated-sources">
+        <include name="*.java" />
+      </fileset>
+    </delete>
+  </target>
+</project>
