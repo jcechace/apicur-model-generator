@@ -17,12 +17,9 @@ package main
 
 import (
 	"fmt"
-        "github.com/fabric8io/kubernetes-client/generator/pkg/schemagen"
+	"github.com/fabric8io/kubernetes-client/generator/pkg/schemagen"
 
-
-    Apicurio "github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1"
-
-
+	Apicurio "github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -34,7 +31,7 @@ func main() {
 	// the CRD List types for which the model should be generated
 	// no other types need to be defined as they are auto discovered
 	crdLists := map[reflect.Type]schemagen.CrdScope{
-		reflect.TypeOf(Apicurio.ApicurioRegistryList{}):  schemagen.Namespaced,
+		reflect.TypeOf(Apicurio.ApicurioRegistryList{}): schemagen.Namespaced,
 	}
 
 	// constraints and patterns for fields
@@ -47,17 +44,15 @@ func main() {
 	providedPackages := map[string]string{
 		// external
 		"k8s.io/apimachinery/pkg/apis/meta/v1": "io.fabric8.kubernetes.api.model",
-                "k8s.io/api/core/v1":                   "io.fabric8.kubernetes.api.model",
+		"k8s.io/api/core/v1":                   "io.fabric8.kubernetes.api.model",
 		"k8s.io/apimachinery/pkg/api/resource": "io.fabric8.kubernetes.api.model",
 		"k8s.io/apimachinery/pkg/runtime":      "io.fabric8.kubernetes.api.model.runtime",
-		
 	}
 
 	// mapping of go packages of this module to the resulting java package
 	// optional ApiGroup and ApiVersion for the go package (which is added to the generated java class)
 	packageMapping := map[string]schemagen.PackageInformation{
 		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicur.registry.operator.api.model", ApiGroup: " apicur.io", ApiVersion: "v1alpha1"},
-
 	}
 
 	// converts all packages starting with <key> to a java package using an automated scheme:
@@ -66,13 +61,10 @@ func main() {
 	// e.g. knative.dev/eventing/pkg/apis/messaging/v1beta1/ChannelTemplateSpec is mapped to "io.fabric8.knative.internal.eventing.pkg.apis.messaging.v1beta1.ChannelTemplateSpec"
 	mappingSchema := map[string]string{
 		"github.com/kubernetes-sigs": "io.fabric8.servicecatalog.internal",
-		
 	}
 
 	// overwriting some times
 	manualTypeMap := map[reflect.Type]string{
-
-                
 
 		reflect.TypeOf(v1.Time{}):              "java.lang.String",
 		reflect.TypeOf(runtime.RawExtension{}): "Map<String, Object>",
