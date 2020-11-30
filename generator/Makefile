@@ -24,6 +24,6 @@ build: gobuild
   popd
 
 gobuild:
-	CGO_ENABLED=0 GO111MODULE=on GO15VENDOREXPERIMENT=1 go build -a ./cmd/generate/generate.go
-	./generate > ../model/src/main/resources/schema/model-schema.json
-	./generate validation > ../model/src/main/resources/schema/model-validation-schema.json
+	CGO_ENABLED=0 GO111MODULE=on GO15VENDOREXPERIMENT=1 go build  -o ./bin/generate -a ./cmd/generate/generate.go
+	./bin/generate > ../model/src/main/resources/schema/model-schema.json
+	./bin/generate validation > ../model/src/main/resources/schema/model-validation-schema.json
