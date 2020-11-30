@@ -7,6 +7,14 @@
   <name>Fabric8 :: Apicurio :: Extension</name>
   <version>2.0.0-SNAPSHOT</version>
 
+  <properties>
+    <!-- Instruct the build to use only UTF-8 encoding for source code -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>10</maven.compiler.source>
+    <maven.compiler.target>10</maven.compiler.target>
+    <release>10</release>
+  </properties>
+
   <modules>
     <module>model</module>
   </modules>
