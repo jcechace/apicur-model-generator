@@ -52,7 +52,7 @@ func main() {
 	// mapping of go packages of this module to the resulting java package
 	// optional ApiGroup and ApiVersion for the go package (which is added to the generated java class)
 	packageMapping := map[string]schemagen.PackageInformation{
-		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicur.registry.operator.api.model", ApiGroup: " apicur.io", ApiVersion: "v1alpha1"},
+		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicurio.registry.operator.api.model", ApiGroup: " apicur.io", ApiVersion: "v1alpha1"},
 	}
 
 	// converts all packages starting with <key> to a java package using an automated scheme:
