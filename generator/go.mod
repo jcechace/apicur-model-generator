@@ -3,7 +3,7 @@ module github.com/rohanKanojia/code-generation-using-fabric8
 go 1.14
 
 require (
-	github.com/Apicurio/apicurio-registry-operator v0.0.0-20201116155134-a186459d823d // indirect
+	github.com/Apicurio/apicurio-registry-operator v0.0.4 // indirect
 	github.com/Kong/kubernetes-ingress-controller v0.0.5 // indirect
 	github.com/fabric8io/kubernetes-client/generator v0.0.0-20201118122546-fb64f92f97ee // indirect
 	github.com/kong/kubernetes-ingress-controller v0.0.5 // indirect
