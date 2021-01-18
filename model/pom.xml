@@ -32,7 +32,7 @@
         <fabric8.kubernetes-client.version>4.13.0</fabric8.kubernetes-client.version>
         <maven.buildhelper.plugin.version>3.1.0</maven.buildhelper.plugin.version>
         <maven.bundle.plugin.version>4.2.1</maven.bundle.plugin.version>
-        <jsonschema2pojo.version>0.4.23</jsonschema2pojo.version>
+        <jsonschema2pojo.version>0.5.1</jsonschema2pojo.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <lombok.version>1.18.12</lombok.version>
@@ -95,7 +95,8 @@
                     <includeToString>false</includeToString>
                     <includeHashcodeAndEquals>false</includeHashcodeAndEquals>
                     <outputDirectory>${project.build.directory}/generated-sources</outputDirectory>
-                    <annotationStyle>none</annotationStyle>
+                    <inclusionLevel>NON_NULL</inclusionLevel>
+
                 </configuration>
                 <executions>
                     <execution>

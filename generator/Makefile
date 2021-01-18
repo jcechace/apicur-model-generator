@@ -20,7 +20,7 @@ all: build
 
 build: gobuild
 	pushd ../model && \
-	mvn clean install -o && \
+	mvn clean install && \
   popd
 
 gobuild:
