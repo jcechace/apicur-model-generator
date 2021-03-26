@@ -24,6 +24,7 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"reflect"
+        "strings"
 )
 
 func main() {
@@ -52,7 +53,7 @@ func main() {
 	// mapping of go packages of this module to the resulting java package
 	// optional ApiGroup and ApiVersion for the go package (which is added to the generated java class)
 	packageMapping := map[string]schemagen.PackageInformation{
-		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicurio.registry.operator.api.model", ApiGroup: " apicur.io", ApiVersion: "v1alpha1"},
+		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicurio.registry.operator.api.model", ApiGroup: "apicur.io", ApiVersion: "v1alpha1"},
 	}
 
 	// converts all packages starting with <key> to a java package using an automated scheme:
@@ -60,12 +61,10 @@ func main() {
 	//  - replace '/' with '.' for a valid java package name
 	// e.g. knative.dev/eventing/pkg/apis/messaging/v1beta1/ChannelTemplateSpec is mapped to "io.fabric8.knative.internal.eventing.pkg.apis.messaging.v1beta1.ChannelTemplateSpec"
 	mappingSchema := map[string]string{
-		"github.com/kubernetes-sigs": "io.fabric8.servicecatalog.internal",
 	}
 
 	// overwriting some times
 	manualTypeMap := map[reflect.Type]string{
-
 		reflect.TypeOf(v1.Time{}):              "java.lang.String",
 		reflect.TypeOf(runtime.RawExtension{}): "Map<String, Object>",
 		reflect.TypeOf([]byte{}):               "java.lang.String",
@@ -73,5 +72,7 @@ func main() {
 
 	json := schemagen.GenerateSchema("http://fabric8.io/code-generator/Schema#", crdLists, providedPackages, manualTypeMap, packageMapping, mappingSchema, providedTypes, constraints)
 
+        json = strings.Replace(json, "\"javaType\": \"io.fabric8.kubernetes.api.model.ObjectMeta\"", "\"existingJavaType\": \"io.fabric8.kubernetes.api.model.ObjectMeta\"", -1)
+        json = strings.Replace(json, "\"javaType\": \"io.fabric8.kubernetes.api.model.ListMeta\"", "\"existingJavaType\": \"io.fabric8.kubernetes.api.model.ListMeta\"", -1)
 	fmt.Println(json)
 }

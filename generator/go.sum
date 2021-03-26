@@ -275,8 +275,11 @@ github.com/exponent-io/jsonpath v0.0.0-20151013193312-d6023ce2651d/go.mod h1:ZZM
 github.com/fabric8io/kubernetes-client v1.4.35 h1:uxi2o/28eo/SMD6+6g0dwNj3oAIrocrgac/6wGQzt+Q=
 github.com/fabric8io/kubernetes-client v4.10.2+incompatible h1:4qE4aOrv3GBCRo9wQf4VwKkIEznVq7l+4HHesCEGIUk=
 github.com/fabric8io/kubernetes-client v4.13.0+incompatible h1:2MZgiWYNepzmnC5mYXwPFh/BrIV7carcOZsmUNIZWQU=
+github.com/fabric8io/kubernetes-client v5.2.1+incompatible h1:+v2yvDnSWyv2sCGdxvEyZzq+SLxyEZj50beuwBch0tM=
 github.com/fabric8io/kubernetes-client/generator v0.0.0-20201118122546-fb64f92f97ee h1:RgjyNPBN/RYbkZwuuz+z6D5/yUYUu890iLFf5+j7ytI=
 github.com/fabric8io/kubernetes-client/generator v0.0.0-20201118122546-fb64f92f97ee/go.mod h1:wydcEZRiLNLAcuySkRKkcQdtcc0wMTKzvcOoKtQJiHw=
+github.com/fabric8io/kubernetes-client/generator v0.0.0-20210326132847-5e573272bc6e h1:ZkEqZpRvuZtmjaGNKxyDJFjeC1gZjRwdvb3u8eri3rY=
+github.com/fabric8io/kubernetes-client/generator v0.0.0-20210326132847-5e573272bc6e/go.mod h1:wydcEZRiLNLAcuySkRKkcQdtcc0wMTKzvcOoKtQJiHw=
 github.com/facette/natsort v0.0.0-20181210072756-2cd4dd1e2dcb/go.mod h1:bH6Xx7IW64qjjJq8M2u4dxNaBiDfKK+z/3eGDpXEQhc=
 github.com/fatih/camelcase v1.0.0/go.mod h1:yN2Sb0lFhZJUdVvtELVWefmrXpuZESvPmqwoZc+/fpc=
 github.com/fatih/color v1.6.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=

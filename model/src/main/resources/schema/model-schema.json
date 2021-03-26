@@ -9,7 +9,7 @@
         "apiVersion": {
           "type": "string",
           "description": "",
-          "default": " apicur.io/v1alpha1",
+          "default": "apicur.io/v1alpha1",
           "required": true
         },
         "kind": {
@@ -19,7 +19,7 @@
           "required": true
         },
         "metadata": {
-          "javaType": "io.fabric8.kubernetes.api.model.ObjectMeta"
+          "existingJavaType": "io.fabric8.kubernetes.api.model.ObjectMeta"
         },
         "spec": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_pkg_apis_apicur_v1alpha1_ApicurioRegistrySpec",
@@ -43,7 +43,7 @@
         "apiVersion": {
           "type": "string",
           "description": "",
-          "default": " apicur.io/v1alpha1",
+          "default": "apicur.io/v1alpha1",
           "required": true
         },
         "items": {
@@ -61,7 +61,7 @@
           "required": true
         },
         "metadata": {
-          "javaType": "io.fabric8.kubernetes.api.model.ListMeta"
+          "existingJavaType": "io.fabric8.kubernetes.api.model.ListMeta"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryList",
