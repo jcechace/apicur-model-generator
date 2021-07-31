@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"github.com/fabric8io/kubernetes-client/generator/pkg/schemagen"
 
-	Apicurio "github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1"
+	Apicurio "github.com/Apicurio/apicurio-registry-operator/api/v1"
 
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
@@ -53,7 +53,7 @@ func main() {
 	// mapping of go packages of this module to the resulting java package
 	// optional ApiGroup and ApiVersion for the go package (which is added to the generated java class)
 	packageMapping := map[string]schemagen.PackageInformation{
-		"github.com/Apicurio/apicurio-registry-operator/pkg/apis/apicur/v1alpha1": {JavaPackage: "io.apicurio.registry.operator.api.model", ApiGroup: "apicur.io", ApiVersion: "v1alpha1"},
+		"github.com/Apicurio/apicurio-registry-operator/api/v1": {JavaPackage: "io.apicurio.registry.operator.api.model", ApiGroup: "apicur.io", ApiVersion: "v1"},
 	}
 
 	// converts all packages starting with <key> to a java package using an automated scheme:
