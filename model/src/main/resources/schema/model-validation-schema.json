@@ -1,20 +1,17 @@
 {
   "id": "http://fabric8.io/code-generator/Schema#",
-  "$schema": "http://json-schema.org/schema#",
+  "$schema": "http://json-schema.org/draft-05/schema#",
   "definitions": {
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistry": {
       "type": "object",
-      "description": "",
       "properties": {
         "apiVersion": {
           "type": "string",
-          "description": "",
           "default": "apicur.io/v1",
           "required": true
         },
         "kind": {
           "type": "string",
-          "description": "",
           "default": "ApicurioRegistry",
           "required": true
         },
@@ -23,11 +20,11 @@
         },
         "spec": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpec",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpec"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpec"
         },
         "status": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatus",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatus"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatus"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistry",
@@ -38,25 +35,21 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryList": {
       "type": "object",
-      "description": "",
       "properties": {
         "apiVersion": {
           "type": "string",
-          "description": "",
           "default": "apicur.io/v1",
           "required": true
         },
         "items": {
           "type": "array",
-          "description": "",
           "items": {
             "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistry",
-            "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistry"
+            "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistry"
           }
         },
         "kind": {
           "type": "string",
-          "description": "",
           "default": "ApicurioRegistryList",
           "required": true
         },
@@ -72,15 +65,14 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpec": {
       "type": "object",
-      "description": "",
       "properties": {
         "configuration": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfiguration",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
         },
         "deployment": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecDeployment",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecDeployment"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecDeployment"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpec",
@@ -90,31 +82,28 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfiguration": {
       "type": "object",
-      "description": "",
       "properties": {
         "kafkasql": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkasql",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkasql"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkasql"
         },
         "logLevel": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "persistence": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "security": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurity",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurity"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurity"
         },
         "sql": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSql",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSql"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSql"
         },
         "ui": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationUI",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfiguration",
@@ -124,19 +113,15 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationDataSource": {
       "type": "object",
-      "description": "",
       "properties": {
         "password": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "url": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "userName": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource",
@@ -146,15 +131,14 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurity": {
       "type": "object",
-      "description": "",
       "properties": {
         "scram": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityScram",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityScram"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityScram"
         },
         "tls": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityTls",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityTls"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityTls"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurity",
@@ -164,23 +148,18 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityScram": {
       "type": "object",
-      "description": "",
       "properties": {
         "mechanism": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "passwordSecretName": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "truststoreSecretName": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "user": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityScram",
@@ -190,15 +169,12 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityTls": {
       "type": "object",
-      "description": "",
       "properties": {
         "keystoreSecretName": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "truststoreSecretName": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityTls",
@@ -208,15 +184,13 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkasql": {
       "type": "object",
-      "description": "",
       "properties": {
         "bootstrapServers": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "security": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurity",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurity"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurity"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkasql",
@@ -226,11 +200,10 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurity": {
       "type": "object",
-      "description": "",
       "properties": {
         "keycloak": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurityKeycloak",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurityKeycloak"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurityKeycloak"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurity",
@@ -240,23 +213,18 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurityKeycloak": {
       "type": "object",
-      "description": "",
       "properties": {
         "apiClientId": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "realm": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "uiClientId": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "url": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurityKeycloak",
@@ -266,11 +234,10 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSql": {
       "type": "object",
-      "description": "",
       "properties": {
         "dataSource": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationDataSource",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSql",
@@ -280,11 +247,9 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationUI": {
       "type": "object",
-      "description": "",
       "properties": {
         "readOnly": {
-          "type": "boolean",
-          "description": ""
+          "type": "boolean"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI",
@@ -294,25 +259,21 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecDeployment": {
       "type": "object",
-      "description": "",
       "properties": {
         "affinity": {
-          "javaType": "io.fabric8.kubernetes.api.model.Affinity"
+          "existingJavaType": "io.fabric8.kubernetes.api.model.Affinity"
         },
         "host": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "replicas": {
-          "type": "integer",
-          "description": ""
+          "type": "integer"
         },
         "tolerations": {
           "type": "array",
-          "description": "",
           "javaOmitEmpty": true,
           "items": {
-            "javaType": "io.fabric8.kubernetes.api.model.Toleration"
+            "existingJavaType": "io.fabric8.kubernetes.api.model.Toleration"
           }
         }
       },
@@ -323,27 +284,24 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatus": {
       "type": "object",
-      "description": "",
       "properties": {
         "conditions": {
           "type": "array",
-          "description": "",
           "javaOmitEmpty": true,
           "items": {
-            "javaType": "io.fabric8.kubernetes.api.model.Condition"
+            "existingJavaType": "io.fabric8.kubernetes.api.model.Condition"
           }
         },
         "info": {
           "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusInfo",
-          "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusInfo"
+          "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusInfo"
         },
         "managedResources": {
           "type": "array",
-          "description": "",
           "javaOmitEmpty": true,
           "items": {
             "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusManagedResource",
-            "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusManagedResource"
+            "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusManagedResource"
           }
         }
       },
@@ -354,11 +312,9 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusInfo": {
       "type": "object",
-      "description": "",
       "properties": {
         "host": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusInfo",
@@ -368,19 +324,15 @@
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusManagedResource": {
       "type": "object",
-      "description": "",
       "properties": {
         "kind": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "name": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         },
         "namespace": {
-          "type": "string",
-          "description": ""
+          "type": "string"
         }
       },
       "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusManagedResource",
@@ -393,71 +345,71 @@
   "properties": {
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistry": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistry",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistry"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistry"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryList": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryList",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryList"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryList"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpec": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpec",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpec"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpec"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfiguration": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfiguration",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfiguration"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationDataSource": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationDataSource",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationDataSource"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurity": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurity",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurity"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurity"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityScram": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityScram",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityScram"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityScram"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityTls": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkaSecurityTls",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityTls"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkaSecurityTls"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkasql": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationKafkasql",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkasql"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationKafkasql"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurity": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurity",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurity"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurity"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurityKeycloak": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSecurityKeycloak",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurityKeycloak"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSecurityKeycloak"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSql": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationSql",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSql"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationSql"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationUI": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecConfigurationUI",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecConfigurationUI"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecDeployment": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistrySpecDeployment",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecDeployment"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistrySpecDeployment"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatus": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatus",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatus"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatus"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusInfo": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusInfo",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusInfo"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusInfo"
     },
     "github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusManagedResource": {
       "$ref": "#/definitions/github_com_Apicurio_apicurio-registry-operator_api_v1_ApicurioRegistryStatusManagedResource",
-      "javaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusManagedResource"
+      "existingJavaType": "io.apicurio.registry.operator.api.model.ApicurioRegistryStatusManagedResource"
     }
   },
   "additionalProperties": false

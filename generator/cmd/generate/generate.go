@@ -24,7 +24,6 @@ import (
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"reflect"
-        "strings"
 )
 
 func main() {
@@ -70,9 +69,7 @@ func main() {
 		reflect.TypeOf([]byte{}):               "java.lang.String",
 	}
 
-	json := schemagen.GenerateSchema("http://fabric8.io/code-generator/Schema#", crdLists, providedPackages, manualTypeMap, packageMapping, mappingSchema, providedTypes, constraints)
+	json := schemagen.GenerateSchema("http://fabric8.io/code-generator/Schema#", crdLists, providedPackages, manualTypeMap, packageMapping, mappingSchema, providedTypes, constraints, "io.apicurio")
 
-        json = strings.Replace(json, "\"javaType\": \"io.fabric8.kubernetes.api.model.ObjectMeta\"", "\"existingJavaType\": \"io.fabric8.kubernetes.api.model.ObjectMeta\"", -1)
-        json = strings.Replace(json, "\"javaType\": \"io.fabric8.kubernetes.api.model.ListMeta\"", "\"existingJavaType\": \"io.fabric8.kubernetes.api.model.ListMeta\"", -1)
 	fmt.Println(json)
 }
